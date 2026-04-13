@@ -2,14 +2,42 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+            String s = "sTriNg";
+            String s1 =  "TriN";
+            String equalsS = "sTrINg";
+/*        System.out.println(s.length());
+        System.out.println(s.toLowerCase());
+        System.out.println(s.toUpperCase());
+        System.out.println(s.charAt(1));
+        System.out.println(s.substring(1,5));
+        System.out.println(s.equals(equalsS));*/
+        System.out.println(s.equalsIgnoreCase(equalsS));
+        System.out.println(s.contains(s1));
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+
+        /*
+        не буквы:
+        String regex = "[^\\p{L}]";
+        где:
+        1. Квадратные скобки [ ]
+Определяют класс символов (набор символов)
+
+2. Символ ^ внутри скобок
+Означает отрицание = "все символы, кроме указанных"
+
+3. \\p{L}
+\\p - это Unicode категория (свойство символа)
+
+{L} - категория Letter (буквы)
+
+
+        * \\p{L}  - Любые буквы (Letters)
+        * \\p{Lu} - Заглавные буквы (Uppercase)
+        * \\p{Ll} - Строчные буквы (Lowercase)
+        * \\p{N}  - Цифры (Numbers)
+        * \\p{P}  - Пунктуация (Punctuation)
+        * \\p{Z}  - Пробелы (Separators)
+        * \\p{S}  - Символы (Symbols: $, +, =)
+        * */
     }
 }
