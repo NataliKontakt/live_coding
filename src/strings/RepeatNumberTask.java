@@ -16,8 +16,12 @@ import java.util.Map;
  * */
 public class RepeatNumberTask {
     public static Map<Character, Integer> repeatNumberOfChars(String input) {
+        //если задание включает требование по длине строки - условие
+        if(input.length() <1 || input.length() > 10){
+            throw new IllegalArgumentException("Недопустимая длина строки!");
+        }
         Map<Character, Integer> freq = new HashMap<>();
-        for(char c : input.toCharArray()){
+        for(char c : input.toLowerCase().toCharArray()){
             if(!freq.containsKey(c)){
                 freq.put(c,1);
             } else {
@@ -30,10 +34,21 @@ public class RepeatNumberTask {
         return freq;
     }
 
+    /*
+    * тестируем
+    * Слово состоит из всех разных букв
+    * Слово состоит из одной буквы
+    * Могут ли прислать пустую строку
+    * Какие границы для длины (от 1 до 10) - тогда границы 1,2,9,10,11
+    * Считается ли большая буква той же, что и маленькая - Да
+    * */
+
     public static void main(String[] args) {
         System.out.println(repeatNumberOfChars("java"));
         System.out.println(repeatNumberOfChars("12g"));
         System.out.println(repeatNumberOfChars(":#$@##"));
+        System.out.println(repeatNumberOfChars("12gG"));
+        System.out.println(repeatNumberOfChars(""));
     }
 
 }
