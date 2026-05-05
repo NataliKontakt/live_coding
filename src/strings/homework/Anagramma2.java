@@ -15,7 +15,7 @@ import java.util.Arrays;
 * если нет возвращаю false
 * если да - возвращаю true
  * */
-public class Anagramma {
+public class Anagramma2 {
     public static boolean isAnagramm(String input1, String input2){
        String clean1 = input1.replaceAll(" ", "").toLowerCase();
        String clean2 = input2.replaceAll(" ", "").toLowerCase();

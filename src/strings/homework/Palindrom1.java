@@ -12,7 +12,7 @@ package strings.homework;
 * 5. Сравниваю значения строк: если совпадает - палиндром, если нет - нет
 *
 * */
-public class Palindrom {
+public class Palindrom1 {
     public static boolean isPalindrom (String input){
         String cleaned = input
                 .replaceAll("[^\\p{L}]", "")
